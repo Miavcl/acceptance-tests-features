@@ -1,0 +1,16 @@
+Feature: Contextual Translation
+
+As a student
+I want to select words within a lesson
+So that I can view their immediate translation
+
+Scenario: Display translation and pronunciation
+Given the user is reading a lesson
+When the user selects a word
+Then the system displays the meaning of the word
+And the system displays its pronunciation
+
+Scenario: Translation unavailable
+Given the selected word does not exist in the database
+When the user selects the word
+Then the system displays "Translation not available"
